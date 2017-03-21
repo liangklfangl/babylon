@@ -1,0 +1,49 @@
+{
+  "name": "babyl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+    "scripts": {
+    "watch": "babel src --out-dir lib -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "antd": "^2.8.2",
+    "babel-generator": "^6.21.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-traverse": "^6.23.1",
+    "babel-types": "^6.23.0",
+    "babylon": "^6.16.1",
+    "loader-utils": "^1.1.0",
+    "mark-twain": "^1.1.6",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpackcc": "^2.0.15"
+  },
+  "entry": {
+    "index": "./lib/index.js"
+  },
+  "babel": {
+    "presets": [
+      "es2015-ie",
+      "react",
+      "stage-0"
+    ],
+    "plugins": [
+      "add-module-exports",
+      [
+        "transform-runtime",
+        {
+          "helpers": false,
+          "polyfill": false,
+          "regenerator": true,
+          "moduleName": "babel-runtime"
+        }
+      ]
+    ]
+  }
+}
