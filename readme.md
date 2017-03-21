@@ -43,7 +43,7 @@ ctDOM = require("react-dom");\n\n  var _antd = require("antd");\n\n  return Reac
 t.createElement(\n    "div",\n    null,\n    React.createElement(\n      _antd.B
 utton,\n      null,\n      "Default"\n    )\n  );\n}' } ] }
 ```
-因为我们的babel被添加了如下插件，所以上面的代码都会被转化为React.createElement.
+因为我们的babel被添加了如下插件，所以上面的代码都会被转化为React.createElement. 而且这里是返回的code下的字符串，经过babel处理就会转化为对象了!!babel接受字符串转化为对象！
 
 #### 1.2 loader的方法
 
