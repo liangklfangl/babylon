@@ -64,11 +64,10 @@ module.exports = function transformer(content, lang) {
          because our pre element has attribute of highlighted, so secondItem is attribute node
          */
         let codeNode = node.elements[2].elements[1];
-        //you can see this example in bin/test.js
         let code = codeNode.value;
-        //we get code part
+        //得到代码的内容了，也就是demo的代码内容
         const codeAst = parser(code);
-        //we then parse code part of pre tag
+        //继续解析代码内容~~~
         traverse(codeAst, {
           //see https://astexplorer.net/#/tSIO7NIclp/2%E8%A7%A3%E6%9E%90%E5%87%BA%E6%9D%A5%E7%9A%84%E5%B0%B1%E6%98%AF%E6%88%91%E4%BB%AC%E7%9A%84program.body%E9%83%A8%E5%88%86%EF%BC%8C%E4%B9%9F%E5%B0%B1%E6%98%AF%E5%A6%82%E4%B8%8B%E7%9A%84%E5%86%85%E5%AE%B9%EF%BC%9A
           //you can see $node in ImportDeclaration then we remove it

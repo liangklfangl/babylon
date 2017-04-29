@@ -1,6 +1,7 @@
 const React =  require('react');
 const ReactDOM = require('react-dom');
-import { Button } from 'antd';module.exports = {
+import { Button } from 'antd';
+module.exports = {
   "content": ["article", ["h3", "1.mark-twain解析出来的无法解析成为ast"], function jsonmlReactLoader() {
     return <div>
     <Button type="primary" shape="circle" icon="search" />

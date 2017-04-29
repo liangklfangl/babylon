@@ -1,16 +1,8 @@
-webpackJsonp([0,1],[
+webpackJsonp([0],[
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-module.exports = {
-  "content": ["article", ["h3", "1.mark-twain解析出来的无法解析成为ast"], ["pre", {
-    "lang": "jsx"
-  }, ["code", "import { Button } from 'antd';\nReactDOM.render(\n  <div>\n    <Button type=\"primary\" shape=\"circle\" icon=\"search\" />\n    <Button type=\"primary\" icon=\"search\">Search</Button>\n    <Button shape=\"circle\" icon=\"search\" />\n    <Button icon=\"search\">Search</Button>\n    <br />\n    <Button type=\"ghost\" shape=\"circle\" icon=\"search\" />\n    <Button type=\"ghost\" icon=\"search\">Search</Button>\n    <Button type=\"dashed\" shape=\"circle\" icon=\"search\" />\n    <Button type=\"dashed\" icon=\"search\">Search</Button>\n  </div>,\n  mountNode\n);"]]],
-  "meta": {}
-};
+throw new Error("Module parse failed: C:\\Users\\Administrator\\Desktop\\babylon\\lib\\code.md Unexpected character '#' (2:0)\nYou may need an appropriate loader to handle this file type.\n| \r\n| ### 1.mark-twain解析出来的无法解析成为ast\r\n| ````jsx\r\n| import { Button } from 'antd';\r");
 
 /***/ }),
 /* 1 */
@@ -20,7 +12,6 @@ module.exports = {
 
 
 var markdown = __webpack_require__(0);
-// var markdown = require('./Ok1-createClass.md');
 
 /***/ })
 ],[1]);

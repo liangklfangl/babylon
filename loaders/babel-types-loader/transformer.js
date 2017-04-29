@@ -81,7 +81,6 @@ module.exports = function transformer(
           callPathNode.callee.object.name === 'ReactDOM' &&
           callPathNode.callee.property &&
           callPathNode.callee.property.name === 'render') {
-
         renderReturn = types.returnStatement(
           callPathNode.arguments[0]
         );

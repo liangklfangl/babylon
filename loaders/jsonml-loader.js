@@ -2,12 +2,15 @@
 const loaderUtils = require('loader-utils');
 const generator = require('babel-generator').default;
 const transformer = require('./transformer');
-
+ const fs = require('fs');
 module.exports = function jsonmlReactLoader(content) {
-
+  console.log("loader的类型", content);
   if (this.cacheable) {
     this.cacheable();
   }
+    fs.writeFile('source.js',content,()=>{
+    console.log('source.js writed!');
+  })
   const query = loaderUtils.getOptions(this);
   const lang = query.lang || 'react-example';
   //we get configured language in dora-plugin-preview
@@ -21,7 +24,6 @@ module.exports = function jsonmlReactLoader(content) {
   }
   //We insert `import` before ast. But, if you want to update ast, you need to take care of ImportDeclaration and etc
   const code = generator(inputAst, null, content).code;
-
   //Turns an AST into code.
   const noreact = query.noreact;
   //You can pass noreact to refuse to import react
@@ -32,7 +34,7 @@ module.exports = function jsonmlReactLoader(content) {
         'const ReactDOM = require(\'react-dom\');\n'+
         code;
   // console.log('<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<code>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>',processedCode);
-  const fs = require('fs');
+ 
   fs.writeFile('ast.js',processedCode,()=>{
     console.log('ended');
   })

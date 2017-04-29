@@ -16,6 +16,7 @@ module.exports = function(markdownData, {
   noreact,
 }) {
   const { content } = markdownData;
+  //得到content内容部分~~~
   if (Array.isArray(content)) {
     markdownData.content = content.map(node => {
       //First node is string 'article' while second is an Array
@@ -23,8 +24,9 @@ module.exports = function(markdownData, {
       const attr = node[1];
       if (tagName === 'pre' && attr && attr.lang === lang) {
         const code = node[2][1];
-        //We get code here.
+        //得到code中的代码部分~~~
         const processedCode = transformer(code, babelConfig, noreact);
+        //返回的对象的code属性是已经处理后的demo页码中的代码~~~
         return {
           code: processedCode
         };
